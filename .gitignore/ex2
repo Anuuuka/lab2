@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ int main()
+ {
+     float x1, x2, x3;
+     float y1, y2,  y3;
+     float a, b, c;
+     float p, P,S; /* S is area, p is the semi-perimeter , P is the perimeter */
+     printf("A(x1;y1)\n enter x1:  ");
+     scanf ("%f", &x1);
+     printf("enter y1:  ");
+     scanf("%f", &y1);
+
+     printf("B(x2;y2)\n enter x2: ");
+     scanf ("%f", &x2);
+     printf("enter y2:  ");
+     scanf("%f", &y2);
+
+     printf("C(x3;y3)\n enter x3:  ");
+     scanf ("%f", &x3);
+     printf("enter y3:  ");
+     scanf("%f", &y3);
+
+     a=sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
+     printf("a=|BC|= %.4f\n", a);
+     b=sqrt((x3-x1)*(x3-x1)+(y3-y1)*(y3-y1));
+     printf("b=|AC|=%.4f\n", b);
+     c=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+     printf("c=|AB|=%.4f\n", c);
+
+     if(a>0 && b>0 && c>0)
+     {
+         if(a+b>c && b+c>a && a+c>b)
+         {
+             printf("ABC  is triangle\n", a,b,c);
+             p= (a+b+c)/2;
+             P= a+b+c;
+             S= sqrt(p*(p-a)*(p-b)*(p-c));
+             printf("The area of triangle S= %.4f\n", S);
+             printf("The perimeter of triangle P= %.4f", P);
+         }
+         else{
+            printf("ABC is not triangle",a,b,c );
+         }
+     }
+     else{
+        printf("a,b,c are not side", a, b, c);
+     }
+
+     return 0;
+
+ }
