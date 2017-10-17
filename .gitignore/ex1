@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ int main()
+{
+    int x;
+    float res1, res2;
+    float y;
+    printf(" enter number x: ");
+    scanf("%d", &x);
+    res1= sqrt(1-fabs(cos(x*x)));
+    res2 = sqrt(1+fabs(tan(x*x)));
+    y= res1+res2;
+
+    printf("y= %.3f", y);
+
+    return 0;
+
+}
