@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int number;
+    int pow =0;
+    int dano = 64;
+    printf("Enter number : ");
+    scanf("%d",&number);
+    while(dano>1)
+    {
+    pow++;
+    dano /= 2;
+    }
+    number >>= pow;
+    printf("\n\n\tDivision = %X",number);
+    return 0;
+
+}
