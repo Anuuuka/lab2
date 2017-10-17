@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    unsigned int mask = 0x80000000;
+    int chislo;
+    int n;
+    printf("Enter number: ");
+    scanf("%d", &chislo);
+
+    printf("Enter position: ");
+    scanf("%d", &n);
+
+    mask>>=(32-n);
+
+    chislo |= mask;
+
+    printf("\n\n\t%X\n",chislo);
+    return 0;
+
+    }
