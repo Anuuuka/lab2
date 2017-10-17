@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    unsigned int i_bit;
+    unsigned int i_mask=0xF8FFFFFF;
+    int i_result;
+
+      printf (" Enter number : ");
+      scanf ("%d", &i_bit);
+
+      i_result= i_bit & i_mask;
+      printf("\n\n\t Result= %X", i_result);
+    return 0;
+}
